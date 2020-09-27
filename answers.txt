@@ -1,0 +1,38 @@
+1. Who was on the team?
+    Samuel Adams and Bahdah Shin
+
+2. For Person LastName1: (2)
+    a. Which number did you have? 600? 642?
+    b. What were the set of best parameters your program finds?
+        roll = nnn in degrees
+        tilt = mmm in degrees
+        twist = zzz in degrees.
+    c. To at least six digits past the decimal point, what was the fraction of the water you could fit
+        into the birdbath using your numbers?
+3. For Person LastName2: (2)
+    a. Which number did you have? 600? 642?
+    b. What were the set of best parameters your program finds?
+        roll = nnn in degrees
+        tilt = mmm in degrees
+        twist = zzz in degrees.
+    c. To at least six digits past the decimal point, what was the fraction of the water you could fit
+        into the birdbath using your numbers?
+4. What approach or approaches did you use? (2)
+    Did you use two different methods?
+    Did you try other methods?
+    Did you have any complications along the way?
+5. How did the work breakdown structure go with the team? (1)
+    Did you take the opportunity to meet someone new?
+    How did you assure that both of you contributed?
+6. Is the idea of a team homework idea helping to reduce stress? (1)
+7. Rosenbrock’s Banana: (1)
+    Look up the function called Rosenbrock’s Banana. Write three paragraphs about it. Why is it
+    famous? How does it apply to this homework assignment? What makes it difficult? What is
+    Nelder-Mead optimization? Can you generate a plot of this (optional).
+8. Conclusion and Summary: (1)
+    What else did you learn along the way here? What else can you conclude?
+    What did you learn about? Dr. K expects at least two solid paragraphs here.
+9. Bonus B: (1)
+    Implement a convex optimization program to find the minima of Rosenbrock’s Banana
+    function, from methods described in class.
+    Work with the function f(x,y) = (1-x)^2 + 100(y-x^2)^2

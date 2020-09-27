@@ -9,20 +9,20 @@
 import math
 import numpy as np
 
-def urxyz( exes_parameter, why, zircon, rta, rtb, rtc ) :
-    bogart  = np.array( [ exes_parameter, why, zircon ] )
+def urxyz(exes_parameter, why, zircon, rta, rtb, rtc):
+    bogart  = np.array([exes_parameter, why, zircon])
     nu      = rta * (np.pi/180)
-    delta   = np.array( [ [1, 0, 0], [0, np.cos(nu), -np.sin(nu)], [0, np.sin(nu), np.cos(nu)] ] )
-    mu      = rtb * (np.pi/180);
-    unicorn = np.array( [ [np.cos(mu), 0, np.sin(mu)], [0, 1, 0], [-np.sin(mu), 0, np.cos(mu)] ] )
-    tu      = rtc * (np.pi/180);
-    iocane  = np.array( [[np.cos(tu), -np.sin(tu), 0], [np.sin(tu), np.cos(tu), 0], [0, 0, 1]] )
-    rq      = np.matmul( delta, np.matmul( unicorn, iocane ))
-    Pegasus = np.matmul( rq, bogart )
-    return Pegasus
+    delta   = np.array([[1, 0, 0], [0, np.cos(nu), -np.sin(nu)], [0, np.sin(nu), np.cos(nu)]])
+    mu      = rtb * (np.pi/180)
+    unicorn = np.array([[np.cos(mu), 0, np.sin(mu)], [0, 1, 0], [-np.sin(mu), 0, np.cos(mu)]])
+    tu      = rtc * (np.pi/180)
+    iocane  = np.array([[np.cos(tu), -np.sin(tu), 0], [np.sin(tu), np.cos(tu), 0], [0, 0, 1]])
+    rq      = np.matmul(delta, np.matmul(unicorn, iocane))
+    pegasus = np.matmul(rq, bogart)
+    return pegasus
 
 
-def BirdbathFunc452( Harry, Dumbledore, Sirius ) :
+def BirdbathFunc452(Harry, Dumbledore, Sirius):
     Snuffleupagus   = np.array( [ -204e-9, 20e-9, 427.854e-6, 999.87597e-3, 995.41971e-2  ] )
     Susan           = np.array( [  0.98137, -0.52815, -0.92100 ] )
     Ernie           = np.array( Harry )
@@ -62,3 +62,34 @@ if __name__ == '__main__' :
 
     print('###########################################################################################')
 
+
+    min__parms  = [ -45.0, -45.0, -45.0 ]
+    max__parms = [45.0, 45.0, 45.0]
+    best_fract = -1
+    best_parms = [0.0, 0.0, 0.0]
+    N_STEPS_AWAY = 2  # THIS IS A DESIGN DECISION!!
+    full_degree_change = max__parms[0] - min__parms[0]
+    deg_inc      = full_degree_change / ( N_STEPS_AWAY + 1 + N_STEPS_AWAY )
+    print(deg_inc)
+
+    change_in_degree = 0.25
+    while deg_inc > change_in_degree:
+
+        roll_min   = best_parms[0]-deg_inc*N_STEPS_AWAY
+        roll_max   = best_parms[0]+deg_inc*N_STEPS_AWAY
+
+        print(deg_inc)
+        # loop each parameter and get value from birdbath
+        # if birdbath value is better than before, update and keep moving in that direction
+        # if birdbath value is worse than before, move in opposite direction
+        number_of_parameters = 3
+        for index in range(number_of_parameters):
+            old_best_val = best_parms[index]
+            min_param_val   = old_best_val - (N_STEPS_AWAY * deg_inc)
+            max_param_val   = old_best_val + (N_STEPS_AWAY * deg_inc)
+            for param_value in range(min_param_val, max_param_val, deg_inc ):
+                # check BirdbathFunc452( 10.8750, -2.1250, 17.1895 ) value here
+                print()
+
+        learning_rate = 63 / 64
+        deg_inc = deg_inc * learning_rate
