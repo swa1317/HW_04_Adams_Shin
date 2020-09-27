@@ -56,7 +56,7 @@ if __name__ == '__main__' :
     #  Emit a trial test case here, etc...:
     print('\n\n\n')
     nn  = BirdbathFunc423( -16.5000, 9.3750, 25.0195 )
-    print('Fraction of Water = ', nn, '<-- Example test case results\n' )
+    print('Fraction of Water = ', nn, '<-- Example test case results\n' ) # 0.26286611363383067
 
 
 
