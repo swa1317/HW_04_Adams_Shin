@@ -81,11 +81,12 @@ if __name__ == '__main__' :
             min_param_val = old_best_val - (N_STEPS_AWAY * deg_inc)
             max_param_val = old_best_val + (N_STEPS_AWAY * deg_inc)
             for param_value in np.arange(min_param_val, max_param_val, deg_inc):
+                old_parameter = best_parms[index]
                 old_value = BirdbathFunc452(best_parms[0], best_parms[1], best_parms[2])
                 best_parms[index] = param_value
                 new_value = BirdbathFunc452(best_parms[0], best_parms[1], best_parms[2])
                 if new_value <= old_value:
-                    best_parms[index] = old_value #reset to old value
+                    best_parms[index] = old_parameter #reset to old parameter
 
         learning_rate = 63 / 64
         deg_inc = deg_inc * learning_rate # learning rate decay
