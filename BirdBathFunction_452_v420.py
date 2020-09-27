@@ -69,27 +69,25 @@ if __name__ == '__main__' :
     best_parms = [0.0, 0.0, 0.0]
     N_STEPS_AWAY = 2  # THIS IS A DESIGN DECISION!!
     full_degree_change = max__parms[0] - min__parms[0]
-    deg_inc      = full_degree_change / ( N_STEPS_AWAY + 1 + N_STEPS_AWAY )
-    print(deg_inc)
+    deg_inc = full_degree_change / (2*N_STEPS_AWAY + 1)
 
     change_in_degree = 0.25
     while deg_inc > change_in_degree:
-
-        roll_min   = best_parms[0]-deg_inc*N_STEPS_AWAY
-        roll_max   = best_parms[0]+deg_inc*N_STEPS_AWAY
-
-        print(deg_inc)
-        # loop each parameter and get value from birdbath
-        # if birdbath value is better than before, update and keep moving in that direction
-        # if birdbath value is worse than before, move in opposite direction
+        print("CHANGE IN DEGREE: {0} ====================================".format(deg_inc))
         number_of_parameters = 3
         for index in range(number_of_parameters):
+            print("INDEX: {0} ====================================".format(index))
             old_best_val = best_parms[index]
-            min_param_val   = old_best_val - (N_STEPS_AWAY * deg_inc)
-            max_param_val   = old_best_val + (N_STEPS_AWAY * deg_inc)
-            for param_value in range(min_param_val, max_param_val, deg_inc ):
-                # check BirdbathFunc452( 10.8750, -2.1250, 17.1895 ) value here
-                print()
+            min_param_val = old_best_val - (N_STEPS_AWAY * deg_inc)
+            max_param_val = old_best_val + (N_STEPS_AWAY * deg_inc)
+            for param_value in np.arange(min_param_val, max_param_val, deg_inc):
+                old_value = BirdbathFunc452(best_parms[0], best_parms[1], best_parms[2])
+                best_parms[index] = param_value
+                new_value = BirdbathFunc452(best_parms[0], best_parms[1], best_parms[2])
+                if new_value <= old_value:
+                    best_parms[index] = old_value #reset to old value
 
         learning_rate = 63 / 64
-        deg_inc = deg_inc * learning_rate
+        deg_inc = deg_inc * learning_rate # learning rate decay
+
+
