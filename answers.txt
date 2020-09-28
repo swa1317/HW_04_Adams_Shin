@@ -32,7 +32,7 @@
     For this homework, Bahdah and Samuel remained a team just as with last homework. We feel as though we work together
     well because we balance out each other's strengths in creating a thorough solution to the problem. For this particular
     assignment, Samuel began with the initial layout of the given files and started to piece together a connection to
-    axially-aligned gradient descent. Bahdah then continued to complete the function to achieve our best variables. Finally,
+    axially-aligned gradient descent. Bahdah then continued to complete the function to achieve our best values. Finally,
     Samuel used to values to draw a conclusion and complete the assignment's documentation.
 
 6. Is the idea of a team homework idea helping to reduce stress? (1)
