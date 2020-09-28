@@ -1,20 +1,22 @@
 1. Who was on the team?
     Samuel Adams and Bahdah Shin
 
-2. For Person LastName1: (2)
-    a. Which number did you have? 600? 642?
+2. For Person Shin: (2)
+    a. Which number did you have?
+        423
     b. What were the set of best parameters your program finds?
-        roll = nnn in degrees
-        tilt = mmm in degrees
-        twist = zzz in degrees.
+        roll = -24.916290268467062 in degrees
+        tilt = 16.363636363636353 in degrees
+        twist = -8.477221653405712 in degrees.
     c. To at least six digits past the decimal point, what was the fraction of the water you could fit
         into the birdbath using your numbers?
-3. For Person LastName2: (2)
-    a. Which number did you have? 600? 642?
+3. For Person Adams: (2)
+    a. Which number did you have?
+        452
     b. What were the set of best parameters your program finds?
-        roll = nnn in degrees
-        tilt = mmm in degrees
-        twist = zzz in degrees.
+        roll = -20.559829612232672 in degrees
+        tilt = -7.636917225518063 in degrees
+        twist = -18.78808510206095 in degrees.
     c. To at least six digits past the decimal point, what was the fraction of the water you could fit
         into the birdbath using your numbers?
 4. What approach or approaches did you use? (2)

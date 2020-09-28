@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from Shin_BirdBathFunction_423_v420 import BirdbathFunc423
 from Adams_BirdBathFunction_452_v420 import BirdbathFunc452
 
-def axially_aligned_gradient_descent():
+def axially_aligned_gradient_descent(function_type):
     min__parms = [-45.0, -45.0, -45.0]
     max__parms = [45.0, 45.0, 45.0]
     best_fract = -1
@@ -23,9 +23,15 @@ def axially_aligned_gradient_descent():
             max_param_val = old_best_val + (N_STEPS_AWAY * deg_inc)
             for param_value in np.arange(min_param_val, max_param_val, deg_inc):
                 old_parameter = best_parms[index]
-                old_value = BirdbathFunc423(best_parms[0], best_parms[1], best_parms[2])
+                if function_type:
+                    old_value = BirdbathFunc423(best_parms[0], best_parms[1], best_parms[2])
+                else:
+                    old_value = BirdbathFunc452(best_parms[0], best_parms[1], best_parms[2])
                 best_parms[index] = param_value
-                new_value = BirdbathFunc423(best_parms[0], best_parms[1], best_parms[2])
+                if function_type:
+                    new_value = BirdbathFunc423(best_parms[0], best_parms[1], best_parms[2])
+                else:
+                    new_value = BirdbathFunc452(best_parms[0], best_parms[1], best_parms[2])
                 if new_value <= old_value:
                     best_parms[index] = old_parameter  # reset to old parameter
                     best_fract = old_value
@@ -34,20 +40,33 @@ def axially_aligned_gradient_descent():
 
         learning_rate = 63 / 64
         deg_inc = deg_inc * learning_rate  # learning rate decay
-    return best_fract
 
+    print("Max value: {0}".format(best_fract))
+    print("The parameters for max value")
+    print("roll: {0} tilt: {1} twist: {2}".format(best_parms[0], best_parms[1], best_parms[2]))
+
+
+# test function to get true best value
 def best_value():
-    a =[]
+    a = -1
     b = -1
     for i in range(-45, 45):
         for j in range(-45, 45):
             for k in range(-45, 45):
                 c = BirdbathFunc423(i, j, k)
+                d = BirdbathFunc452(i, j, k)
                 if b == -1 or b < c:
                     b = c
-    return b
+                if a == -1 or a < d:
+                    a = d
+    print("BirdbathFunc423 => Shin {0}".format(b))
+    print("BirdbathFunc452 => Adams{0}".format(a))
 if __name__ == '__main__' :
     # a = best_value()
-    b = axially_aligned_gradient_descent()
-    # print(a) # 0.4981701057062594
-    print(b) # 0.4977630741037475
+    # true for BirdbathFunc423 Shin
+    print("BirdbathFunc423 => Shin")
+    axially_aligned_gradient_descent(True)
+    print("BirdbathFunc452 => Adams")
+    axially_aligned_gradient_descent(False)
+    print()
+    best_value()
