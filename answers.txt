@@ -24,17 +24,15 @@
     Did you try other methods?
     Did you have any complications along the way?
 5. How did the work breakdown structure go with the team? (1)
-<<<<<<< HEAD
     Did you take the opportunity to meet someone new?
     How did you assure that both of you contributed?
-=======
+
     For this homework, Bahdah and Samuel remained a team just as with last homework. We feel as though we work together
     well because we balance out each other's strengths in creating a thorough solution to the problem. For this particular
     assignment, Samuel began with the initial layout of the given files and started to piece together a connection to
     axially-aligned gradient descent. Bahdah then continued to complete the function to achieve our best values. Finally,
     Samuel used to values to draw a conclusion and complete the assignment's documentation.
 
->>>>>>> 1927428d1182b33952f29480dcd9feba69d9edb3
 6. Is the idea of a team homework idea helping to reduce stress? (1)
 7. Rosenbrock’s Banana: (1)
     Look up the function called Rosenbrock’s Banana. Write three paragraphs about it. Why is it
