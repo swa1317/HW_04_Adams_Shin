@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import cm
 
 
 from Shin_BirdBathFunction_423_v420 import BirdbathFunc423
@@ -61,6 +62,24 @@ def best_value():
                     a = d
     print("BirdbathFunc423 => Shin {0}".format(b))
     print("BirdbathFunc452 => Adams{0}".format(a))
+
+
+
+def plot_rosenbrock():
+    x = np.arange(start=-2, stop=2, step=0.15)
+    y = np.arange(start=-1, stop=3, step=0.15)
+    x, y = np.meshgrid(x, y)
+
+    rosenbrock = lambda x, y: (1 - x) ** 2 + 100 * ((y - x ** 2) ** 2)
+    z = rosenbrock(x, y)
+    ax = plt.axes(projection='3d')
+    ax.plot_surface(x, y, z, rstride=1, cstride=1,
+                    cmap='viridis', edgecolor='none')
+    plt.title('Rosenbrock’s Banana')
+    plt.show()
+
+    return [x, y, z]
+
 if __name__ == '__main__' :
     # a = best_value()
     # true for BirdbathFunc423 Shin
@@ -69,4 +88,4 @@ if __name__ == '__main__' :
     print("BirdbathFunc452 => Adams")
     axially_aligned_gradient_descent(False)
     print()
-    best_value()
+    plot_rosenbrock()
