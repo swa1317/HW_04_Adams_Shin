@@ -4,25 +4,42 @@
 2. For Person Shin: (2)
     a. Which number did you have?
         423
+
     b. What were the set of best parameters your program finds?
         roll = -24.916290268467062 in degrees
         tilt = 16.363636363636353 in degrees
         twist = -8.477221653405712 in degrees.
+
     c. To at least six digits past the decimal point, what was the fraction of the water you could fit
         into the birdbath using your numbers?
+        0.4977630741037475
+
 3. For Person Adams: (2)
     a. Which number did you have?
         452
+
     b. What were the set of best parameters your program finds?
         roll = -20.559829612232672 in degrees
         tilt = -7.636917225518063 in degrees
         twist = -18.78808510206095 in degrees.
+
     c. To at least six digits past the decimal point, what was the fraction of the water you could fit
         into the birdbath using your numbers?
+        0.4994443180890335
+
 4. What approach or approaches did you use? (2)
+    We used the axially aligned gradient descent.
+
     Did you use two different methods?
+        We used on method.
+
     Did you try other methods?
+        We did not try the other methods.
+
     Did you have any complications along the way?
+        I didn't realize that the bird function was given to us in the email.
+        This was realized later in the day.
+        
 5. How did the work breakdown structure go with the team? (1)
     Did you take the opportunity to meet someone new?
     How did you assure that both of you contributed?
