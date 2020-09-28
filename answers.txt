@@ -1,30 +1,44 @@
 1. Who was on the team?
     Samuel Adams and Bahdah Shin
 
-2. For Person LastName1: (2)
-    a. Which number did you have? 600? 642?
+2. For Person Adams: (2)
+    a. Which number did you have?
+        452
     b. What were the set of best parameters your program finds?
-        roll = nnn in degrees
-        tilt = mmm in degrees
-        twist = zzz in degrees.
+        roll = -20.5598
+        tilt = -7.6369
+        twist = -18.7880
     c. To at least six digits past the decimal point, what was the fraction of the water you could fit
         into the birdbath using your numbers?
-3. For Person LastName2: (2)
-    a. Which number did you have? 600? 642?
+        0.4994443180890335
+
+3. For Person Shin: (2)
+    a. Which number did you have?
+        423
     b. What were the set of best parameters your program finds?
-        roll = nnn in degrees
-        tilt = mmm in degrees
-        twist = zzz in degrees.
+        roll = -24.9162
+        tilt = 16.3636
+        twist = -8.4772
     c. To at least six digits past the decimal point, what was the fraction of the water you could fit
         into the birdbath using your numbers?
+        0.4977630741037475
+
 4. What approach or approaches did you use? (2)
-    Did you use two different methods?
-    Did you try other methods?
-    Did you have any complications along the way?
+    We decided to use axially-aligned gradient descent. We felt as though this was the best function to gain experience
+    with and apply to the Bird Bath Function. To test our results from this function, we also implemented brute force;
+    our results were similar so we knew that we were on the right track.
+
 5. How did the work breakdown structure go with the team? (1)
-    Did you take the opportunity to meet someone new?
-    How did you assure that both of you contributed?
+    For this homework, Bahdah and Samuel remained a team just as with last homework. We feel as though we work together
+    well because we balance out each other's strengths in creating a thorough solution to the problem. For this particular
+    assignment, Samuel began with the initial layout of the given files and started to piece together a connection to
+    axially-aligned gradient descent. Bahdah then continued to complete the function to achieve our best variables. Finally,
+    Samuel used to values to draw a conclusion and complete the assignment's documentation.
+
 6. Is the idea of a team homework idea helping to reduce stress? (1)
+    The team homework assignments are helping to manage stress because it divides the work load so that we can each
+
+
 7. Rosenbrock’s Banana: (1)
     Look up the function called Rosenbrock’s Banana. Write three paragraphs about it. Why is it
     famous? How does it apply to this homework assignment? What makes it difficult? What is
