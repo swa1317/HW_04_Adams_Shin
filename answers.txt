@@ -39,7 +39,7 @@
     Did you have any complications along the way?
         I didn't realize that the bird function was given to us in the email.
         This was realized later in the day.
-        
+
 5. How did the work breakdown structure go with the team? (1)
     Did you take the opportunity to meet someone new?
     How did you assure that both of you contributed?
@@ -51,6 +51,9 @@
     Samuel used to values to draw a conclusion and complete the assignment's documentation.
 
 6. Is the idea of a team homework idea helping to reduce stress? (1)
+    With a team, we are able to fill in missing or forgotten information.
+    Teamup reduced stress.
+
 7. Rosenbrock’s Banana: (1)
     Look up the function called Rosenbrock’s Banana. Write three paragraphs about it. Why is it
     famous? How does it apply to this homework assignment? What makes it difficult? What is
